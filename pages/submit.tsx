@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from "@/pages/components/header";
 import { FileUploader } from "react-drag-drop-files";
-import { useState } from "react";
+import React, { useState } from "react";
 import { supabase } from "@/pages/supabase";
 import Link from "next/link";
 
@@ -16,7 +16,7 @@ export default function Submit() {
 
     const sanitize = (string : string) => string.replace(/[^\w\/!\-.*()\s&$@=;:+,?'"]/g, '-');
 
-    const submit = async event => {
+    const submit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setUploading(true);
         const filename = Math.floor(Math.random() * 1000) + sanitize(file.name);
