@@ -48,7 +48,7 @@ export default function Submit() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header href="/submit" />
-            <main className="mt-16">
+            <main className="my-16">
                 <p className="flex justify-center text-3xl sm:text-4xl">
                     {!success ? "Submit your music" : "Success!"}
                 </p>
