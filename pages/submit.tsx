@@ -54,7 +54,8 @@ export default function Submit() {
                     {!success ?
                         <form onSubmit={event => submit(event)} className="py-5 px-7 rounded-3xl bg-black/10">
                             <div className="flex flex-col gap-5">
-                                <input type="text" placeholder="Title" value={title} onChange={event => setTitle(event.target.value)}
+                                <input type="text" placeholder="Title" required={true}
+                                       value={title} onChange={event => setTitle(event.target.value)}
                                        className="border-none text-center text-lg bg-black/0 focus:ring-0" />
                                 <FileUploader dropMessageStyle={{opacity: 0}}
                                               handleChange={file => setFile(file)}
