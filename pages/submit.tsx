@@ -14,7 +14,7 @@ export default function Submit() {
     const [ uploadFailed, setUploadFailed ] = useState(false);
     const [ success, setSuccess ] = useState(false);
 
-    const sanitize = string => string.replace(/[^\w\/!\-.*()\s&$@=;:+,?'"]/g, '-');
+    const sanitize = (string : string) => string.replace(/[^\w\/!\-.*()\s&$@=;:+,?'"]/g, '-');
 
     const submit = async event => {
         event.preventDefault();
