@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Submit() {
     const [ title, setTitle ] = useState('');
-    const [ file, setFile ] = useState<File>(null);
+    const [ file, setFile ] = useState<File | null>(null);
     const [ isTooLarge, setIsTooLarge ] = useState(false);
     const [ isWrongType, setIsWrongType ] = useState(false);
     const [ uploading, setUploading ] = useState(false);
@@ -60,7 +60,7 @@ export default function Submit() {
                                        value={title} onChange={event => setTitle(event.target.value)}
                                        className="border-none text-center text-lg bg-black/0 focus:ring-0" />
                                 <FileUploader dropMessageStyle={{opacity: 0}}
-                                              handleChange={file => setFile(file)}
+                                              handleChange={(file : File) => setFile(file)}
                                               types={["MP3", "WAV", "FLAC", "OGG"]} onTypeError={() => setIsWrongType(true)}
                                               maxSize={50} onSizeError={() => setIsTooLarge(true)}>
                                     <div className="py-8 flex flex-col gap-5 justify-center rounded-3xl bg-black/20">
