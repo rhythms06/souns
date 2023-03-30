@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Header from "@/pages/components/header";
 import { FileUploader } from "react-drag-drop-files";
 import React, { useState } from "react";
-import { supabase } from "@/pages/supabase";
+import { supabase } from "@/supabase";
 import Link from "next/link";
 
 export default function Submit() {
