@@ -18,23 +18,25 @@ export default function Submit() {
 
     const submit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setUploading(true);
-        const filename = Math.floor(Math.random() * 1000) + sanitize(file.name);
-        await supabase
-            .storage
-            .from('music')
-            .upload(filename, file, {
-                cacheControl: '3600',
-                upsert: false
-            })
-            .then(async () => {
-                await supabase
-                    .from('songs')
-                    .insert({title: title, filename: filename})
-                    .then(() => setSuccess(true));
-            })
-            .catch(() => setUploadFailed(true));
-        setUploading(false);
+        if (file) {
+            setUploading(true);
+            const filename = Math.floor(Math.random() * 1000) + sanitize(file.name);
+            await supabase
+                .storage
+                .from('music')
+                .upload(filename, file, {
+                    cacheControl: '3600',
+                    upsert: false
+                })
+                .then(async () => {
+                    await supabase
+                        .from('songs')
+                        .insert({title: title, filename: filename})
+                        .then(() => setSuccess(true));
+                })
+                .catch(() => setUploadFailed(true));
+            setUploading(false);
+        }
     }
 
     return (
