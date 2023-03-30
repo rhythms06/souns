@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Submit() {
     const [ title, setTitle ] = useState('');
-    const [ file, setFile ] = useState(null);
+    const [ file, setFile ] = useState<File>(null);
     const [ isTooLarge, setIsTooLarge ] = useState(false);
     const [ isWrongType, setIsWrongType ] = useState(false);
     const [ uploading, setUploading ] = useState(false);
