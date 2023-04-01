@@ -1,6 +1,6 @@
 import { SongMetadata } from "@/supabase";
 
-export const Song = ({ title, filename } : SongMetadata) => {
+export default function Song({ title, filename } : SongMetadata) {
   return (
       <div className="py-3 px-5 border rounded-2xl flex gap-3 justify-between items-center bg-black/10">
           <h1 className="text-black/50">{title}</h1>

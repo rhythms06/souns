@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Header from "@/pages/components/header";
 import { SongMetadata, supabase } from "@/supabase";
-import { Song } from "@/pages/components/song";
+import Song from "@/pages/components/song";
 import { GetStaticProps } from "next";
 
 export default function Vote({ songs } : { songs: SongMetadata[] }) {
