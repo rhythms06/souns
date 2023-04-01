@@ -23,7 +23,7 @@ export default function Home() {
                       <p className="text-center">Anyone can submit a song once a day</p>
                   </div>
               </Link>
-              <Link href="/" className="cursor-not-allowed">
+              <Link href="/vote">
                   <div className="p-5 w-56 flex flex-col gap-5 rounded-3xl hover:bg-black/25">
                       <h1 className="text-4xl text-center">Vote</h1>
                       <p className="text-center">Souns holders vote on what song they like</p>
