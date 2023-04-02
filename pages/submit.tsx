@@ -52,9 +52,9 @@ export default function Submit() {
                 <p className="flex justify-center text-3xl sm:text-4xl">
                     {!success ? "Submit your music" : "Success!"}
                 </p>
-                <div className="mt-12 w-full flex justify-center">
+                <div className="mt-12 mx-5 flex justify-center">
                     {!success ?
-                        <form onSubmit={event => submit(event)} className="py-5 px-7 rounded-3xl bg-black/10">
+                        <form onSubmit={event => submit(event)} className="py-5 px-7 max-w-md rounded-3xl bg-black/10">
                             <div className="flex flex-col gap-5">
                                 <input type="text" placeholder="Title" required={true}
                                        value={title} onChange={event => setTitle(event.target.value)}
@@ -67,7 +67,7 @@ export default function Submit() {
                                         { !file && !isTooLarge && !isWrongType &&
                                             <>
                                                 <p className="text-center">Click or drag to upload</p>
-                                                <p className="text-sm text-center">Accepted file formats: MP3, WAV, FLAC, OGG</p>
+                                                <p className="text-xs sm:text-sm text-center">Accepted file formats: MP3, WAV, FLAC, OGG</p>
                                             </>
                                         }
                                         { !file && (isTooLarge || isWrongType) &&
@@ -83,20 +83,22 @@ export default function Submit() {
                                         }
                                     </div>
                                 </FileUploader>
-                                <label className="w-96 inline-flex gap-5">
-                                    <input type="checkbox" required={true} className="mt-1 bg-black/0 border-2" />
-                                    <span className="text-sm">
+                                <label className="inline-flex gap-2.5 sm:gap-5">
+                                    <input type="checkbox" required={true}
+                                           className="mt-0.5 sm:mt-1 h-2.5 w-2.5 sm:h-3 sm:w-3 bg-black/0 border-2" />
+                                    <span className="text-xs sm:text-sm">
                                     I have reviewed and accept the terms and conditions of submitting to Souns Records.
                                 </span>
                                 </label>
-                                <label className="w-96 inline-flex gap-5">
-                                    <input type="checkbox" required={true} className="mt-1 bg-black/0 border-2" />
-                                    <span className="text-sm">
+                                <label className="inline-flex gap-2.5 sm:gap-5">
+                                    <input type="checkbox" required={true}
+                                           className="mt-0.5 sm:mt-1 h-2.5 w-2.5 sm:h-3 sm:w-3 bg-black/0 border-2" />
+                                    <span className="text-xs sm:text-sm">
                                     I confirm I have full ownership rights to the music I am submitting and
                                     all samples therein and accept and bear responsibility for breaking this rule.
                                 </span>
                                 </label>
-                                <div className="flex flex-col items-center">
+                                <div className="sm:mt-0.5 flex flex-col items-center">
                                     <button type="submit" disabled={!file}
                                             className={`py-2 px-5 rounded-xl
                                                        disabled:text-black/10 disabled:cursor-not-allowed
