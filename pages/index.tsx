@@ -12,8 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header href="/" />
-      <main className="mt-16">
-          <p className="flex justify-center text-3xl sm:text-4xl">
+      <main className="my-16">
+          <p className="flex justify-center text-2xl sm:text-3xl md:text-4xl">
               One song, every day, forever.
           </p>
           <div className="mt-12 sm:mt-20 md:mt-0 sm:h-96 flex flex-col md:flex-row items-center justify-evenly">
