@@ -37,6 +37,9 @@ dependencies:
   react-drag-drop-files:
     specifier: ^2.3.9
     version: 2.3.9(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)
+  react-icons:
+    specifier: ^4.8.0
+    version: 4.8.0(react@18.2.0)
   tailwindcss:
     specifier: ^3.3.0
     version: 3.3.0(postcss@8.4.21)
@@ -2466,6 +2469,14 @@ packages:
       styled-components: 5.3.9(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)
     transitivePeerDependencies:
       - react-is
+    dev: false
+
+  /react-icons@4.8.0(react@18.2.0):
+    resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is@16.13.1:
